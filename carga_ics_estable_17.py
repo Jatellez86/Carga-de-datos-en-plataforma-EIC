@@ -19,7 +19,9 @@ import os
 import shutil
 from datetime import date
 from datetime import datetime, timedelta
-import pandas as pd                                      
+import pandas as pd 
+import os
+import glob
 
 
 # Definicion de variables ---------------------------------------------------------------------
@@ -32,10 +34,6 @@ fecha_actual = date.today()
 fecha_anterior = fecha_actual - timedelta(days=1)
 
 # carpeta a correr
-
-
-import os
-import glob
 
 # Definir la ruta del directorio
 ruta_directorio = r"G:\Unidades compartidas\GM_OP_ANALISIS_DE_DATOS\21.1 validacion kms\RESPUESTA_UF17"
