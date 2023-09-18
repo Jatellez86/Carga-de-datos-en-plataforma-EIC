@@ -1,3 +1,13 @@
+# Importa las bibliotecas necesarias para la automatización del navegador con Selenium
+# **********************************************************************************************
+#  @Nombre: Boot carga de datos ICS
+#  @Autor: Javier Tellez
+#  @Fecha: 20230325
+#  @Cambios:
+#  @Ayudas:
+# **********************************************************************************************
+#----------------------------------------------------------------------------------------------
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -16,8 +26,8 @@ import pandas as pd
 driver = False
 session_id = False
 loginState = False
-user = 'GRM034'
-password = 'Isa756***'
+user = 'user_prueba'
+password = 'pwd_prueba'
 fecha_actual = date.today()
 fecha_anterior = fecha_actual - timedelta(days=1)
 
@@ -144,7 +154,7 @@ for i in lista_objeciones['id_fase_v']:
         driver.find_element('xpath','//*[@id="reclamar"]/tbody/tr[3]/td[2]/div/label').click()
         time.sleep(2)
 
-        # Tu ruta original
+        #ruta original
         ruta = id_fase_v['ruta'].iloc[0]
 
         # Reemplazar las barras invertidas simples con barras invertidas dobles
